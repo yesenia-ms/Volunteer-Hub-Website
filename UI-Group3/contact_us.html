@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Volunteer Hub</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Roboto', Arial, sans-serif;
+            color: #fff;
+        }
+
+        .container h1 {
+            text-align: center;
+            color: #140650;
+            margin-bottom: 0px;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #buttons {
+            text-align: right;
+        }
+
+        #buttons a {
+            margin-left: 6px;
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        #buttons button {
+            background-color: #140650;
+            color: #FFFFFF;
+            border: 1px solid #2E6DA4;
+            border-radius: 4px;
+            padding: 6px 20px;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-weight: normal;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        form {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 200px;
+            margin: 0 auto;
+            }
+
+
+        form label {
+            display: block;
+            color: #140650;
+            margin-bottom: 8px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            background-color: #140650;
+            color: #FFFFFF;
+            border: 1px solid #2E6DA4;
+            border-radius: 4px;
+            padding: 6px 20px;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-weight: normal;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            #buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #buttons button {
+        margin: 6px;
+        }
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header">
+        <div class="container">
+            <div id="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="The Logo">
+                </a>
+            </div>
+            <div id="buttons">
+                <a href="./about_us.html"><button>About Us</button></a>
+                <a href="./contact_us.html"><button>Contact Us</button></a>
+                <a href="./signin.html"><button>Sign In</button></a>
+                <a href="./signup.html"><button>Sign Up</button></a>
+                <a href="./signout.html"><button>Sign Out</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+
+        <form>
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required><br>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="message">Message or Question:</label>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2024 Volunteer Hub. All rights reserved.
+    </footer>
+
+</body>
+
+</html>
