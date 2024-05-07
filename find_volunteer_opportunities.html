@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Volunteer Hub</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="assets/css/find_volunteer_opportunities.css">
+</head>
+
+<body>
+
+    <div id="header">
+        <div id="logo-dropdown-container">
+            <div id="dropdown">
+                <span id="dropdown-icon">&#9776;</span>
+                <div id="dropdown-content">
+                    <a href="./find_volunteer_opportunities.php"><button>Find Volunteer Opportunities</button></a>
+                    <a href="./about_us.php"><button>About Us</button></a>
+                    <a href="./faq.php"><button>FAQs</button></a>
+                    <a href="contact_us.php"><button>Contact Us</button></a>
+                </div>
+            </div>
+            <div id="logo">
+                <a href="index.php">
+                    <img src="images/logo.png" alt="The Logo">
+                </a>
+            </div>
+        </div>
+        <div id="buttons">
+            <a href="./signup.html"><button>Sign Up</button></a>
+            <a href="./signin.html"><button>Sign In</button></a>
+            <div class="dropdown">
+                <img src="./images/profile_icon.png" alt="Icon Image" id="dropdownIcon">
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="./dashboard.html">Dashboard</a>
+                    <a href="./Account_Settings.html">Account Settings</a>
+                    <a href="./logout.html">Logout</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container">
+        <div class="centered-text">
+            <h3>Find Volunteer Opportunity</h3>
+            <!-- Add the green area around the search containers -->
+            <div class="green-area">
+                <div class="search-container">
+                    <input type="text" id="keyword" name="keyword" placeholder="Search by keyword / organization name">
+                    <input type="text" id="city" name="city" placeholder="Search by city / zipcode">
+                </div>
+                <div class="search-container">
+                    <select id="sort-by" name="sort-by">
+                        <option value="zipcode">Sort by Zipcode</option>
+                        <option value="date">Sort by Date</option>
+                        <option value="organization">Sort by Organization</option>
+                    </select>
+                    <select id="filter-by" name="filter-by">
+                        <option value="zipcode">Filter by Zipcode</option>
+                        <option value="date">Filter by Date</option>
+                        <option value="organization">Filter by Organization</option>
+                    </select>
+                    <button type="button" class="search-button">Search</button>
+                </div>
+            </div>
+            <!-- Results Area -->
+<!-- Results Area -->
+<div class="results-area">
+    <div class="opportunity">
+        <p><strong>Event Name:</strong> Volunteer at Local Shelter</p>
+        <p><strong>Organization:</strong> Community Outreach Center</p>
+        <p><strong>Task:</strong> Serving food to the homeless</p>
+        <p><strong>Date:</strong> April 15, 2024</p>
+        <p><strong>Time:</strong> 9:00 AM - 12:00 PM</p>
+        <p><strong>Location:</strong> New York, NY 10001</p>
+        <button type="button" class="search-button">Register</button>
+    </div>
+    <div class="opportunity">
+        <p><strong>Event Name:</strong> Community Clean-up Day</p>
+        <p><strong>Organization:</strong> Green Earth Foundation</p>
+        <p><strong>Task:</strong> Collecting trash in the community</p>
+        <p><strong>Date:</strong> April 20, 2024</p>
+        <p><strong>Time:</strong> 10:00 AM - 2:00 PM</p>
+        <p><strong>Location:</strong> Los Angeles, CA 90001</p>
+        <button type="button" class="search-button">Register</button>
+    </div>
+    <div class="opportunity">
+        <p><strong>Event Name:</strong> Food Drive for the Homeless</p>
+        <p><strong>Organization:</strong> Helping Hands Charity</p>
+        <p><strong>Task:</strong> Collecting and distributing food items</p>
+        <p><strong>Date:</strong> May 1, 2024</p>
+        <p><strong>Time:</strong> 11:00 AM - 3:00 PM</p>
+        <p><strong>Location:</strong> Chicago, IL 60601</p>
+        <button type="button" class="search-button">Register</button>
+    </div>
+    <div class="opportunity">
+        <p><strong>Event Name:</strong> Tutoring Session for Underprivileged Children</p>
+        <p><strong>Organization:</strong> Education for All</p>
+        <p><strong>Task:</strong> Providing academic support to children</p>
+        <p><strong>Date:</strong> May 10, 2024</p>
+        <p><strong>Time:</strong> 3:00 PM - 5:00 PM</p>
+        <p><strong>Location:</strong> Houston, TX 77001</p>
+        <button type="button" class="search-button">Register</button>
+    </div>
+    <div class="opportunity">
+        <p><strong>Event Name:</strong> Beach Cleanup Project</p>
+        <p><strong>Organization:</strong> Ocean Conservation Society</p>
+        <p><strong>Task:</strong> Cleaning up litter from the beach</p>
+        <p><strong>Date:</strong> May 20, 2024</p>
+        <p><strong>Time:</strong> 8:00 AM - 11:00 AM</p>
+        <p><strong>Location:</strong> Miami, FL 33101</p>
+        <button type="button" class="search-button">Register</button>
+    </div>
+</div>
+
+       
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Volunteer Hub. All rights reserved.
+    </footer>
+
+</body>
+
+</html>

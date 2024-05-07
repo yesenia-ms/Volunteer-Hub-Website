@@ -4,147 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up | Volunteer Hub</title>
+    <title>Home | Volunteer Hub</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: url('images/background.jpg') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Roboto', Arial, sans-serif;
-            color: #fff;
-        }
-
-        .container h1 {
-            text-align: center;
-            color: #140650;
-            margin-bottom: 0px;
-        }
-
-        .container {
-            position: relative;
-            width: 100%;
-            margin: 0 auto;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        #header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        #logo img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        #buttons {
-            text-align: right;
-        }
-
-        #buttons a {
-            margin-left: 6px;
-            text-decoration: none;
-            color: #FFFFFF;
-        }
-
-        #buttons button {
-            background-color: #140650;
-            color: #FFFFFF;
-            border: 1px solid #2E6DA4;
-            border-radius: 4px;
-            padding: 6px 20px;
-            font-family: 'Roboto', Arial, sans-serif;
-            font-weight: normal;
-            font-size: 14px;
-            cursor: pointer;
-        }
-
-
-        form {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 200px;
-            margin: 0 auto;
-        }
-
-
-        form label {
-            display: block;
-            color: #140650;
-            margin-bottom: 8px;
-        }
-
-        form input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 16px;
-            box-sizing: border-box;
-        }
-
-        form button {
-            background-color: #140650;
-            color: #FFFFFF;
-            border: 1px solid #2E6DA4;
-            border-radius: 4px;
-            padding: 6px 20px;
-            font-family: 'Roboto', Arial, sans-serif;
-            font-weight: normal;
-            font-size: 14px;
-            cursor: pointer;
-        }
-
-        @media (max-width: 768px) {
-            #buttons {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        #buttons button {
-        margin: 6px;
-        }
-        }
-
-        footer {
-            text-align: center;
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/signin.css">
 </head>
 
 <body>
 
     <div id="header">
         <div class="container">
-            <div id="logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="The Logo">
-                </a>
+            <div id="logo-dropdown-container">
+                <div id="dropdown">
+                    <span id="dropdown-icon">&#9776;</span>
+                    <div id="dropdown-content">
+                        <a href="./find_volunteer_opportunities.php"><button>Find Volunteer Opportunities</button></a>
+                        <a href="./about_us.php"><button>About Us</button></a>
+                        <a href="./faq.php"><button>FAQs</button></a>
+                        <a href="contact_us.php"><button>Contact Us</button></a>
+                    </div>
+                </div>
+                <div id="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="The Logo">
+                    </a>
+                </div>
             </div>
             <div id="buttons">
-                <a href="./about_us.html"><button>About Us</button></a>
-                <a href="./contact_us.html"><button>Contact Us</button></a>
-                <a href="./signin.html"><button>Sign In</button></a>
                 <a href="./signup.html"><button>Sign Up</button></a>
-                <a href="./signout.html"><button>Sign Out</button></a>
+                <a href="./signin.html"><button>Sign In</button></a>
             </div>
         </div>
     </div>
 
     <div class="container">
-        <h1>Sign In</h1>
+        
+
 
         <form>
+
+            <h1 class="signin-heading">Sign In</h1>
+
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required><br>
 
@@ -152,6 +51,9 @@
             <input type="password" id="password" name="password" required><br>
 
             <button type="submit">Sign In</button>
+
+            <p>New to Volunteer Hub? <a href="signup.html">Join Today</a></p>
+
         </form>
     </div>
 

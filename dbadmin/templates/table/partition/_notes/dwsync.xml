@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="rebuild.twig" server="ec2-18-219-47-173.us-east-2.compute.amazonaws.com//var/www/html/" local="132672540440000000" remote="132672540440000000" Dst="2" />
+<file name="repair.twig" server="ec2-18-219-47-173.us-east-2.compute.amazonaws.com//var/www/html/" local="132672540440000000" remote="132672540440000000" Dst="2" />
+<file name="optimize.twig" server="ec2-18-219-47-173.us-east-2.compute.amazonaws.com//var/www/html/" local="132672540440000000" remote="132672540440000000" Dst="2" />
+<file name="check.twig" server="ec2-18-219-47-173.us-east-2.compute.amazonaws.com//var/www/html/" local="132672540440000000" remote="132672540440000000" Dst="2" />
+<file name="truncate.twig" server="ec2-18-219-47-173.us-east-2.compute.amazonaws.com//var/www/html/" local="132672540440000000" remote="132672540440000000" Dst="2" />
+<file name="analyze.twig" server="ec2-18-219-47-173.us-east-2.compute.amazonaws.com//var/www/html/" local="132672540440000000" remote="132672540440000000" Dst="2" />
+<file name="drop.twig" server="ec2-18-219-47-173.us-east-2.compute.amazonaws.com//var/www/html/" local="132672540440000000" remote="132672540440000000" Dst="2" />
+</dwsync>

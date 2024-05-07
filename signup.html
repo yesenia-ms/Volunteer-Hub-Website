@@ -4,171 +4,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up | Volunteer Hub</title>
+    <title>Home | Volunteer Hub</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: url('images/background.jpg') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Roboto', Arial, sans-serif;
-            color: #fff;
-        }
+    <link rel="stylesheet" href="assets/css/signup.css">
+    <!--bootstrap.css-->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
 
-        .container h1 {
-            text-align: center;
-            color: #140650;
-            margin-bottom: 0px;
-        }
-
-        .container {
-            position: relative;
-            width: 100%;
-            margin: 0 auto;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        #header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        #logo img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        #buttons {
-            text-align: right;
-        }
-
-        #buttons a {
-            margin-left: 6px;
-            text-decoration: none;
-            color: #FFFFFF;
-        }
-
-        #buttons button {
-            background-color: #140650;
-            color: #FFFFFF;
-            border: 1px solid #2E6DA4;
-            border-radius: 4px;
-            padding: 6px 20px;
-            font-family: 'Roboto', Arial, sans-serif;
-            font-weight: normal;
-            font-size: 14px;
-            cursor: pointer;
-        }
-
-        form {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 200px;
-            margin: 0 auto;
-        }
-
-
-        form label {
-            display: block;
-            color: #140650;
-            margin-bottom: 8px;
-        }
-
-        form input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 16px;
-            box-sizing: border-box;
-        }
-
-        form button {
-            background-color: #140650;
-            color: #FFFFFF;
-            border: 1px solid #2E6DA4;
-            border-radius: 4px;
-            padding: 6px 20px;
-            font-family: 'Roboto', Arial, sans-serif;
-            font-weight: normal;
-            font-size: 14px;
-            cursor: pointer;
-        }
-
-        @media (max-width: 768px) {
-            #buttons {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        #buttons button {
-        margin: 6px;
-        }
-        }
-
-        footer {
-            text-align: center;
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body>
 
     <div id="header">
         <div class="container">
-            <div id="logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="The Logo">
-                </a>
+            <div id="logo-dropdown-container">
+                <div id="dropdown">
+                    <span id="dropdown-icon">&#9776;</span>
+                    <div id="dropdown-content">
+                        <a href="./find_volunteer_opportunities.php"><button>Find Volunteer Opportunities</button></a>
+                        <a href="./about_us.php"><button>About Us</button></a>
+                        <a href="./faq.php"><button>FAQs</button></a>
+                        <a href="contact_us.php"><button>Contact Us</button></a>
+                    </div>
+                </div>
+                <div id="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="The Logo">
+                    </a>
+                </div>
             </div>
             <div id="buttons">
-                <a href="./about_us.html"><button>About Us</button></a>
-                <a href="./contact_us.html"><button>Contact Us</button></a>
-                <a href="./signin.html"><button>Sign In</button></a>
                 <a href="./signup.html"><button>Sign Up</button></a>
-                <a href="./signout.html"><button>Sign Out</button></a>
+                <a href="./signin.html"><button>Sign In</button></a>
             </div>
         </div>
     </div>
+    
+    
 
     <div class="container">
-        <h1>Sign Up</h1>
+        
 
-        <form>
-            <label for="firstname">First Name:</label>
-            <input type="text" id="firstname" name="firstname" required><br>
+        <!-- <?php
+        if(isset($_POST['submit']){
+        ?> -->
+        <form id="mainForm" method="post" action="process-signup.php">
+            <h1 class="signup-heading">Sign Up</h1>
+        
+            <div class="col-sm-6 col-xs-12">
+                <div id="topdivFirst" class="form-group">
+                    <label class="control-label" for="firstname">First Name:</label>
+                    <input type="text" class="form-control" id="First Name" name="firstname" required>
+					<div id="firstfeedback"></div>
+                </div>
+			</div>
+			<div class="col-sm-6 col-xs-12">
+             	<div id="topdivLast" class="form-group">
+                    <label class="control-label" for="lastname">Last Name:</label>
+                    <input type="text" class="form-control" id="Last Name" name="lastname" required>
+					<div id="lastfeedback"></div>
+                </div>
+            </div>
+        
+            <div class="col-sm-12">
+                <div id="topdivCompany" class="form-group">
+                <label class="control-label" for="companyname">Company Name: (Optional)</label>
+                <input type="text" class="form-control" id="Company Name" name="companyname">
+                </div>
+            </div>
+			<div id="companyfeedback"></div>
 
-            <label for="lastname">Last Name:</label>
-            <input type="text" id="lastname" name="lastname" required><br>
+            <div class="col-sm-12">
+                <div id="topdivZipcode" class="form-group">
+                    <label class="control-label" for="zipcode">Zipcode:</label>
+                    <input type="zipcode" class="form-control" id="Zipcode" name="zipcode" required>
+					<div id="zipcodefeedback"></div>
+                </div>
+            </div>
 
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required><br>
+            <div class="col-sm-12">
+                <div id="topdivPhone" class="form-group">
+                    <label class="control-label" for="phone">Phone Number:</label>
+                    <input type="tel" class="form-control" id="Phone" name="phone" required>
+					<div id="phonefeedback"></div>
+                </div>
+            </div>
+			
+            <div class="col-sm-12">
+				<div id="topdivEmail" class="form-group">
+                	<label class="control-label" for="email">Email:</label>
+                	<input type="email" class="form-control" id="Email" name="email" required>
+					<div id="emailfeedback"></div>
+				</div>
+            </div>
+			
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
+            <div class="col-sm-12"> 
+                <div id="topdivPassword" class="form-group">
+                <label class="control-label" for="password">Password:</label>
+                <input type="password" class="form-control" id="Password" name="password" required>
+				<div id="passwordfeedback"></div>
+                </div>
+            </div>
 
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required><br>
+            <!--button type="submit">Sign Up</button-->
+            <div class="col-sm-12">
+                <div class="single-contact-btn">
+                     <input type="submit" value="Sign Up" name="submit" />  
+                </div>
+            </div>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br>
-
-            <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password" name="confirm-password" required><br>
-
-            <button type="submit">Sign Up</button>
+            <div class="col-sm-12">
+                <p>Already have an account? <a href="signin.html">Login</a></p>
+            </div>
         </form>
+        <!-- <?php
+        }
+        else{
+            echo "<h2>Hello from results</h2>";
+            echo '<p>First Name: '.$_POST['firstname']. '</p>';
+            echo '<p>Last Name: '.$_POST['lastname']. '</p>';
+            echo '<p>Email: '.$_POST['email']. '</p>';
+            echo '<p>Phone: '.$_POST['phone']. '</p>';
+            echo '<p>Username: '.$_POST['username']. '</p>';
+            echo '<p>Password: '.$_POST['password']. '</p>';
+            echo '<p>Comments: '.$_POST['comment']. '</p>';
+            if($_POST['email']=="admin@utsa.edu"){
+                echo '<h2>Welcome to the admin dashboard</h2>';
+            }
+        }
+        ?> -->
+        
     </div>
-
+    <div>
+		<br>
+        <br>
+        <br>
+        <br>
+    </div>
     <footer>
         &copy; 2024 Volunteer Hub. All rights reserved.
     </footer>
@@ -176,3 +148,4 @@
 </body>
 
 </html>
+<script src="assets/js/signup.js"></script>

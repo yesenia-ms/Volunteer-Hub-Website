@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: whitesmoke;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 20px;
+}
+
+/* Header with Flexbox for responsive alignment */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo-dropdown-container {
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px; /* Add margin to create space between the logo and the dropdown icon */
+}
+
+#dropdown-icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: #140650;
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#dropdown:hover #dropdown-content {
+    display: block;
+}
+
+#dropdown-content button {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#dropdown-content button:hover {
+    background-color: #ddd;
+}
+
+#buttons {
+    text-align: right;
+}
+
+#buttons button {
+    margin-left: 6px;
+    background-color: #140650;
+    color: #FFFFFF;
+    border: 1px solid #2E6DA4;
+    border-radius: 4px;
+    padding: 6px 20px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    cursor: pointer;
+}
+#buttons {
+    text-align: right;
+}
+
+#buttons button {
+    margin-left: 6px;
+    background-color: #140650;
+    color: #FFFFFF;
+    border: 1px solid #2E6DA4;
+    border-radius: 4px;
+    padding: 6px 20px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Main container setup for central alignment and spacing */
+.container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.centered-text {
+    text-align: center;
+    color: #140650;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Styling for sections within the container */
+.green-area, .results-area {
+    width: 100%; /* Utilize full width for internal containers */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.green-area {
+    background-color: #7CC623;
+    max-width: 800px; /* Optional max width for better appearance on larger screens */
+}
+
+.results-area {
+    max-height: 300px;
+    overflow-y: auto;
+    flex-direction: column;
+}
+
+.opportunity {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+z-index: 1;
+right: 0; /* Align dropdown to the right */
+top: 100%; /* Position dropdown below the icon */
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content a:hover {
+background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.search-container input,
+.search-container select {
+    margin: 5px;
+    padding: 8px; /* Increase padding for more vertical space */
+    width: calc(50% - 10px); /* Adjust width */
+    box-sizing: border-box;
+}
+
+.search-button {
+    background-color: #140650;
+    color: #FFFFFF;
+    border: 1px solid #2E6DA4;
+    border-radius: 4px;
+    padding: 6px 20px;
+    margin-top: 10px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    #header, .container, footer {
+        width: 100%; /* Full width on smaller screens */
+        padding: 10px;
+    }
+
+    .search-container input, .search-container select {
+        width: 100%; /* Full width for form elements on mobile */
+    }
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: calc(100% - 20px); /* Adjust width dynamically */
+}
