@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Volunteer Hub</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="assets/css/account_settings.css">
+</head>
+
+<body>
+
+    <div id="header">
+        <div class="container">
+            <div id="logo-dropdown-container">
+                <div id="dropdown">
+                    <span id="dropdown-icon">&#9776;</span>
+                    <div id="dropdown-content">
+                        <a href="./find_volunteer_opportunities.php"><button>Find Volunteer Opportunities</button></a>
+                        <a href="./about_us.php"><button>About Us</button></a>
+                        <a href="./faq.php"><button>FAQs</button></a>
+                        <a href="./contact_us.php"><button>Contact Us</button></a>
+                    </div>
+                </div>
+                <div id="logo">
+                    <a href="index.php">
+                        <img src="images/logo.png" alt="The Logo">
+                    </a>
+                </div>
+            </div>
+            <div id="buttons">
+            <a href="./signup.html"><button>Sign Up</button></a>
+            <a href="./signin.html"><button>Sign In</button></a>
+            <div class="dropdown">
+                <img src="./images/profile_icon.png" alt="Icon Image" id="dropdownIcon">
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="./dashboard.html">Dashboard</a>
+                    <a href="./settings.html">Settings</a>
+                    <a href="./logout.html">Logout</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <div class="profile-picture-container">
+                <div class="profile-picture">
+                    <img src="profile_picture.jpg">
+                </div>
+                <label for="fileInput" class="post-event-button">Update Profile Picture</label>
+                <input type="file" id="fileInput" style="display: none;">
+            </div>
+        
+            <!-- Move the delete button into a separate container with absolute positioning -->
+            <div class="delete-container">
+                <a href="./delete_account.html" class="post-event-button delete-button">Delete Account</a>
+            </div>
+        
+            <h3 class="signup-heading">Update Information</h3>
+        
+            <div class="name-container">
+                <div class="input-wrapper">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname">
+                </div>
+                <div class="input-wrapper">
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="lastname">
+                </div>
+            </div>
+        
+            <label for="companyname">Company Name: (Optional)</label>
+            <input type="text" id="companyname" name="companyname"><br>
+        
+            <label for="zipcode">Zipcode:</label>
+            <input type="zipcode" id="zipcode" name="zipcode"><br>
+        
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"><br>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br>
+
+            <button type="submit">Update Information</button>
+        
+            <h3 class="signup-heading">Change password</h3>
+
+            <label for="currentpassword">Current Password:</label>
+            <input type="currentpassword" id="currentpassword" name="currentpassword"><br>
+
+            <label for="newpassword">New Password:</label>
+            <input type="newpassword" id="newpassword" name="newpassword"><br>
+
+            <label for="confirmpassword">Confirm Password:</label>
+            <input type="confirmpassword" id="confirmpassword" name="confirmpassword"><br>
+        
+            <button type="submit">Change Password</button>
+
+        </form>
+        
+
+        
+    </div>
+
+    <footer>
+        &copy; 2024 Volunteer Hub. All rights reserved.
+    </footer>
+
+</body>
+
+</html>
