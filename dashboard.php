@@ -73,8 +73,8 @@ $result = $stmt->get_result();
 </div>
 -->
 
-    <div class="container">
-        <div class="centered-text">
+    <div class="centered-container">
+		<div class="centered-text">
 			<?php if (isset($success_message)): ?>
                 <div id="successMessage" class="alert alert-success" style="display:none;"><?= htmlspecialchars($success_message) ?></div>
             <?php endif; ?>

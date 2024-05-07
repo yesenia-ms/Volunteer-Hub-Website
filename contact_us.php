@@ -2,22 +2,16 @@
 session_start();
 include ("header_loggedin.php");
 
-$success_message = "";
-$error_message = "";
-
 if(isset($_POST['Send'])) {
     $success_message = "Your message has been submitted successfully!";
 }
 ?>
 <link rel="stylesheet" href="assets/css/contact_us.css">
     <div class="container">
-		<?php if(isset($success_message)): ?>
-        	<div id="successMessage" class="alert alert-success"><?= htmlspecialchars($success_message) ?></div>
-    	<?php endif; ?>
-    	<?php if(isset($error_message)): ?>
-        	<div id="errorMessage" class="alert alert-danger"><?= htmlspecialchars($error_message) ?></div>
-    	<?php endif; ?>
-        <form method="post" id="contactForm">
+        <form method="post">
+			<?php if(isset($success_message)): ?>
+        		<div id="successMessage" class="alert alert-success"><?= htmlspecialchars($success_message) ?></div>
+    		<?php endif; ?>
             <h1 class="signup-heading">Contact Us</h1>
       
 		<div class="col-sm-12">
@@ -54,7 +48,7 @@ if(isset($_POST['Send'])) {
 
         <div class="col-sm-12">
             <div class="single-contact-btn">
-                <input type="button" value="Send" onclick="setMessage()"/> 
+                <input type="submit" value="Send" name="Send"/>
             </div>
         </div>
         
@@ -67,22 +61,12 @@ include ("footer.php");
 ?>
 <script src="assets/js/contact_us.js"></script>
 <script>
-function setMessage() {
-    document.getElementById('action').value = 'message';
-    document.getElementById('contactForm').submit();
-}
 document.addEventListener('DOMContentLoaded', function () {
     const successMessage = document.getElementById('successMessage');
-    const errorMessage = document.getElementById('errorMessage');
 
     if (successMessage) {
         successMessage.style.display = 'block';
         setTimeout(() => { successMessage.style.display = 'none'; }, 2000); 
-    }
-
-    if (errorMessage) {
-        errorMessage.style.display = 'block';
-        setTimeout(() => { errorMessage.style.display = 'none'; }, 2000);
     }
 });
 </script>
