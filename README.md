@@ -15,3 +15,10 @@ Organizations are able to
 - post events
 - delete events
 - message Volunteer Hub
+
+Devlelopers:
+Parker Willis
+Miyaki Banas
+Adalberto Serna
+David Marcos
+Yesenia Molano Sanchez
