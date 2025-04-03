@@ -17,8 +17,8 @@ Organizations are able to
 - message Volunteer Hub
 
 Devlelopers:
-Parker Willis
-Miyaki Banas
-Adalberto Serna
-David Marcos
-Yesenia Molano Sanchez
+- Parker Willis
+- Miyaki Banas
+- Adalberto Serna
+- David Marcos
+- Yesenia Molano Sanchez
